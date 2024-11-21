@@ -91,8 +91,6 @@ end initial
 #50 $finish;
 endmodule
 
-*/Program to design 4 bit adder by instantiating 1 bit Full adder.also add test bench program */
-Developed by: Register Number*/
 
 ## Functional Simulation: 
 
