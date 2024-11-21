@@ -53,15 +53,17 @@ Note : File name should be with HDL Extension
 
 •	fa.v → Single Bit 3-Input Full Adder [Sub-Module / Function] 
 
+~~~
 module full_adder(A,B,CIN,S,COUT);
 input A,B,CIN;
 output S,COUT;
 assign S=A^B^CIN;
 assign COUT=(A&B) | (CIN&(A^B));
 endmodule
+~~~
 
 •	fa_4bit.v → Top Module for Adding 4-bit Inputs. 
-
+~~~
 module fulladd_4bit(A,B,C0,S,C4);
 input [3:0] A,B;
 input C0;
@@ -73,9 +75,10 @@ full_adder fa1 (A[1],B[1],C1,S[1],C2);
 full_adder fa2 (A[2],B[2],C2,S[2],C3);
 full_adder fa3 (A[3],B[3],C3,S[3],C4);
 endmodule
+~~~
 
 •	fa_4bit_test.v → Test bench 
-
+~~~
 module test_4bit;
 reg [3:0] A;
 reg [3:0] B; reg C0;
@@ -90,7 +93,7 @@ A=4'b0011;B=4'b0011;C0=1'b0;
 end initial
 #50 $finish;
 endmodule
-
+~~~
 
 ## Functional Simulation: 
 
